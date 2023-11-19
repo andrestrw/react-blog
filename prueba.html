@@ -1,0 +1,26 @@
+<script>
+    console.log("Hola");
+    const btn = document.createElement("button");
+    btn.textContent = "Mostrar Imagen";
+    btn.id = "miBoton"
+
+    const padre = document.getElementById("variation_tela");
+    padre.appendChild(btn);
+
+    btn.addEventListener("click", function () {
+        // Crear la imagen
+        const imagen = document.createElement("img");
+        imagen.src = "https://www.parquemueble.com/wp-content/uploads/2023/11/tela-lido-froca.jpg";
+
+        // Crear el tercer hijo (contenedor)
+        const tercerhijo = document.createElement("div");
+
+        // Agregar la imagen al tercer hijo
+        tercerhijo.appendChild(imagen);
+
+        // Agregar el tercer hijo al padre
+        padre.appendChild(tercerhijo);
+
+
+    });
+</script>
