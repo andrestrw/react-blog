@@ -6,20 +6,23 @@ Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la 
 
 
 
-  # Formas de ver el proecto
+  # Formas de ver el proyecto
 
 
 El proyecto ha sido creado con React.js iniciado mediante npm create vite@latest por lo que se puede acceder de dos formas: 
 
 1 -> Descargando y iniciandolo mediante un servidor en forma local.
+
 2 -> Accediendo directamente mediante firebase [https://blog-react-547ce.web.app](https://blog-react-547ce.web.app)
 
-  # h2
+  ## Forma 1
 
-  Primero, ejecutamos el servidor de desarrollo:
+  Una vez descargado el proyecto, ejecutamos el servidor de desarrollo con el comando:
 
 > npm run dev
 
-Abra http://localhost:3000 (el que le proporcione su terminal )con su navegador para ver el resultado.
+Abra http://localhost:3000 (el que le proporcione su terminal ) con su navegador para ver el resultado.
 
   # Dependencias
+
+Hice uso de 
