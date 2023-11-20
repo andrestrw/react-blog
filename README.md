@@ -2,8 +2,11 @@
 # React +  Tailwind + Firebase + Vite
 
   # Inspiración
-Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la web [Frontend Mentor](https://www.frontendmentor.io/), posteriormente dentro de cada post del blog inicial decidi ir añadiendo pequeñas aplicaciones con su respectivo código de React a modo de explicación. 
+Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la web [Frontend Mentor](https://www.frontendmentor.io/), posteriormente dentro de cada post del blog inicial decidí ir añadiendo pequeñas aplicaciones con su respectivo código de React a modo de explicación. 
 
+# Evolución
+
+Dentro del blog iré añadiendo poco a poco con el pasar de los días nuevos proyectos que incluirán código de React y llamadas a Apis. 
 
 
   # Formas de ver el proyecto
@@ -11,19 +14,22 @@ Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la 
 
 El proyecto ha sido creado con React.js iniciado mediante el comando npm create vite@latest por lo que se puede acceder de dos formas: 
 
-1 -> Descargando y iniciandolo mediante un servidor de forma local.
+1 -> Descargando y iniciándolo mediante un servidor de forma local.
 
 2 -> Accediendo directamente mediante firebase [https://blog-react-547ce.web.app](https://blog-react-547ce.web.app)
 
+  
   ## Forma 1
 
-  Una vez descargado el proyecto, ejecutamos el servidor de desarrollo con el comando:
+  Una vez descargado el proyecto, exportamos el zip, el archivo resultante lo abrimos en nuestra editor de código y dentro de nuestra terminal ejecutamos el comando:
+  
+> npm install
 
-> npm run dev
+De esta forma descargamos tanto las dependencias de desarrollo como las dependencias de producción para no tener ningún problema a la hora de ejecutar el proyecto.
 
-Abra http://localhost:3000 (el que le proporcione su terminal ) con su navegador para ver el resultado.
+Finalmente abra http://localhost:3000 (el que le proporcione su terminal ) con su navegador para ver el resultado.
 
   # Librerias
 
-Hice uso de la libreria highlight.js para poder visualizar el código desde la propia página web, la descargue mediante npm con el comando:
+Hice uso de la libreria highlight.js para poder visualizar el código desde la propia página web, la cual descargue mediante npm con el comando:
 > npm install highlight.js
