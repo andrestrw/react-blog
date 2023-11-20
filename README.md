@@ -6,8 +6,12 @@ Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la 
 
 # Evolución
 
-Dentro del blog iré añadiendo poco a poco con el pasar de los días nuevos proyectos que incluirán código de React y llamadas a Apis. 
+Dentro del blog iré añadiendo poco a poco con el pasar de los días nuevos proyectos que incluirán más código de React y llamadas a Apis. 
 
+
+# Siguiente proyecto 
+  Ubicación -> src/design/AppBalance.jsx
+  Este proyecto se va a componer de un 
 
   # Formas de ver el proyecto
 
@@ -29,7 +33,7 @@ De esta forma descargamos tanto las dependencias de desarrollo como las dependen
 
 Finalmente abra http://localhost:3000 (el que le proporcione su terminal ) con su navegador para ver el resultado.
 
-  # Librerias
+  # Librerías
 
-Hice uso de la libreria highlight.js para poder visualizar el código desde la propia página web, la cual descargue mediante npm con el comando:
+Hice uso de la librería highlight.js para poder visualizar el código desde la propia página web, la cual descargué mediante npm con el comando:
 > npm install highlight.js
