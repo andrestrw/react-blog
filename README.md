@@ -9,9 +9,9 @@ Proyecto inspirado en un blog, el diseño del mismo fue facilitado gracias a la 
   # Formas de ver el proyecto
 
 
-El proyecto ha sido creado con React.js iniciado mediante npm create vite@latest por lo que se puede acceder de dos formas: 
+El proyecto ha sido creado con React.js iniciado mediante el comando npm create vite@latest por lo que se puede acceder de dos formas: 
 
-1 -> Descargando y iniciandolo mediante un servidor en forma local.
+1 -> Descargando y iniciandolo mediante un servidor de forma local.
 
 2 -> Accediendo directamente mediante firebase [https://blog-react-547ce.web.app](https://blog-react-547ce.web.app)
 
@@ -23,6 +23,7 @@ El proyecto ha sido creado con React.js iniciado mediante npm create vite@latest
 
 Abra http://localhost:3000 (el que le proporcione su terminal ) con su navegador para ver el resultado.
 
-  # Dependencias
+  # Librerias
 
-Hice uso de 
+Hice uso de la libreria highlight.js para poder visualizar el código desde la propia página web, la descargue mediante npm con el comando:
+> npm install highlight.js
