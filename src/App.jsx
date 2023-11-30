@@ -2,6 +2,7 @@ import { Header1 } from './componentes/Header1';
 import { MainArticle } from './componentes/MainArticle';
 import { NewContainer } from './componentes/NewContainer';
 import { ArticlesContainer } from './componentes/ArticlesContainer';
+import './index.css';
 
 // Proyecto 2
 

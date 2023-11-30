@@ -1,4 +1,4 @@
-import img1 from '../assets/images/image-retro-pcs.jpg';
+import img1 from '../assets/images/proyecto_2.png';
 import img2 from '../assets/images/image-top-laptops.jpg';
 import img3 from '../assets/images/image-gaming-growth.jpg';
 import img4 from '../assets/images/proyecto-lista-b.jpg';
@@ -13,8 +13,8 @@ export const ArticlesContainer = () => {
 				<Article
 					img={img1}
 					number='01'
-					title='Reviving Retro PCs'
-					text='What happens when old PCs are given modern upgrades?'
+					title='Proyecto App Balance'
+					text='ReactJs, JS, HTML, Tailwind'
 				></Article>
 			</Link>
 			<Link to='/listaTareas'>

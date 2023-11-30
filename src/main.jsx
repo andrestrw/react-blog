@@ -6,15 +6,10 @@ import './styles.css';
 // import { GiftExpertApp } from './componentes/GiftExpertApp.jsx';
 // import { Counter } from './componentes/Counter.jsx';
 // import { Text } from './componentes/Text.jsx';
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 // importación segundo proyecto
-
 import { AppBalance } from './AppBalance.jsx';
-
 // importación lista de tareas
-
 import { ListaTareas } from './ListaTareas.jsx';
 
 const router = createBrowserRouter([
@@ -36,16 +31,14 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-	<React.StrictMode>
-		<>
-			{/* OTROS CURSOS */}
-			{/* <GiftExpertApp></GiftExpertApp>
+	<>
+		{/* OTROS CURSOS */}
+		{/* <GiftExpertApp></GiftExpertApp>
 		
 		<Counter></Counter>
 		<Text></Text> */}
-			{/* OTROS CURSOS */}
+		{/* OTROS CURSOS */}
 
-			<RouterProvider router={router} />
-		</>
-	</React.StrictMode>
+		<RouterProvider router={router} />
+	</>
 );

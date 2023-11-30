@@ -36,7 +36,7 @@ export const ListaTareas = () => {
 	};
 	return (
 		<>
-			<main className='px-4 pt-6 max-w-[1920px] my-0 mx-auto'>
+			<main className='px-4 pt-6 max-w-[1920px] my-0 mx-auto '>
 				<Header1></Header1>
 				<div className='seccionProyecto'>
 					<div className='filaProyecto'>
@@ -80,7 +80,7 @@ export const ListaTareas = () => {
 																})
 															}
 														>
-															Borrar 1
+															Borrar
 														</button>
 													</div>
 												</div>

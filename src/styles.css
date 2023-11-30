@@ -174,3 +174,21 @@
 	}
 } */
 /* estilos textos  */
+
+.imgFondo {
+	background-image: url('assets/images/React--1-.jpg');
+	height: 650px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+@media (max-width: 980px) {
+	.imgFondo {
+		background-image: url('assets/images/React--1-.jpg');
+		height: 350px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+}
