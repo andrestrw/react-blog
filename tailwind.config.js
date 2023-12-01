@@ -11,6 +11,9 @@ export default {
 				DarkGrayishBlue: 'hsl(236, 13%, 42%)',
 				VeryDarkBlue: 'hsl(240, 100%, 5%)',
 			},
+			spacing: {
+				400: '800px',
+			},
 			maxHeight: {
 				136: '8.5rem',
 			},
