@@ -42,7 +42,7 @@ export const ListaTareas = () => {
 					<div className='filaProyecto'>
 						<div className='columnaPadre1'>
 							<div className='tituloProyecto text-[40px] font-bold sm:text-[58px] my-3'>
-								Proyecto 1
+								Lista de tareas
 							</div>
 							<div className='columna1'>
 								<div className='columna1__elementos'>
