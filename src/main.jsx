@@ -9,8 +9,10 @@ import './styles.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // importación segundo proyecto
 import { AppBalance } from './AppBalance.jsx';
+import ProyectoOne from './Proyecto1.jsx';
+
 // importación lista de tareas
-import { ListaTareas } from './ListaTareas.jsx';
+
 // import project themes
 
 const router = createBrowserRouter([
@@ -26,7 +28,7 @@ const router = createBrowserRouter([
 	},
 	{
 		path: '/listaTareas',
-		element: <ListaTareas />,
+		element: <ProyectoOne />,
 		errorElement: <h1>Error</h1>,
 	},
 ]);

@@ -1,8 +1,12 @@
 import { useReducer, useRef } from 'react';
-import { Header1 } from './componentes/Header1';
-import { Component } from './comp-listaTareas/code';
+import { Header1 } from './componentes-blog/Header1';
+import Columna from './global_components/Columna1';
+import PageContainer from './global_components/pageContainer';
+import Row from './global_components/estilosFila';
+import HeaderGlobal from './global_components/header';
+import { Explanation } from './comp-listaTareas/code';
 
-export const ListaTareas = () => {
+const ProyectoOne = () => {
 	const inputRef = useRef();
 	// El estado resultante de las acciones realizadas en el reductor se almacena en la variable tasks a través del hook useReducer.
 	const [tasks, dispatch] = useReducer((state = [], action) => {
@@ -36,14 +40,16 @@ export const ListaTareas = () => {
 	};
 	return (
 		<>
-			<main className='px-4 pt-6 max-w-[1920px] my-0 mx-auto '>
+			<PageContainer className='px-4 pt-6 max-w-[1920px] my-0 mx-auto '>
 				<Header1></Header1>
-				<div className='seccionProyecto'>
-					<div className='filaProyecto'>
-						<div className='columnaPadre1'>
-							<div className='tituloProyecto text-[40px] font-bold sm:text-[58px] my-3'>
-								Lista de tareas
-							</div>
+				<main className='min-h-screen'>
+					<Row>
+						<Columna>
+							<Explanation></Explanation>
+						</Columna>
+						<Columna>
+							<HeaderGlobal title='Lista de tareas'></HeaderGlobal>
+							{/* desde aqui */}
 							<div className='columna1'>
 								<div className='columna1__elementos'>
 									<h1 className='columna1__titulo'>Introduce una tarea</h1>
@@ -88,11 +94,14 @@ export const ListaTareas = () => {
 									</div>
 								</div>
 							</div>
-						</div>
-						<Component></Component>
-					</div>
-				</div>
-			</main>
+						</Columna>
+
+						{/* <Component></Component>  */}
+					</Row>
+				</main>
+			</PageContainer>
 		</>
 	);
 };
+
+export default ProyectoOne;

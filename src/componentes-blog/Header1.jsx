@@ -5,7 +5,7 @@ import logo from '../assets/images/logo.svg';
 
 export const Header1 = () => {
 	return (
-		<header className=' flex place-content-between items-center mb-8'>
+		<header className=' flex place-content-between items-center my-6'>
 			<Link to='/'>
 				<img src={logo} alt='Logo' />
 			</Link>

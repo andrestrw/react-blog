@@ -1,128 +1,41 @@
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import LiCol from '../componentes-blog/LiCol';
 
-export const Component = () => {
-	const codeString = `import { useReducer, useRef } from 'react';
-    import { Header1 } from './componentes/Header1';
-    import { Component } from './comp-listaTareas/code';
-    
-    export const ListaTareas = () => {
-        const inputRef = useRef();
-        // El estado resultante de las acciones realizadas en el reductor se almacena 
-        en la variable tasks a través del hook useReducer.
-        const [tasks, dispatch] = useReducer((state = [], action) => {
-            switch (action.type) {
-                case 'add_task': {
-                    return [...state, { uniqueKey: action.uniqueKey, title: action.title }];
-                    // spreed operator  -> realiza una copia de el array y lo concatena 
-                    con 2 pares clave valor que le indicamos aquí, la primera propiedad 
-                    la llave única y la segunda la el título que lleva la información introducida en el input.
-                }
-                case 'remove_task': {
-                    return state.filter(task => task.uniqueKey !== action.uniqueKey);
-                    // Cuando la expresión task.uniqueKey !== action.uniqueKey es false, significa que la 
-                    uniqueKey de la tarea es igual a la uniqueKey proporcionada en la acción (action.uniqueKey). En este caso, 
-                    filter excluye esa tarea del array resultante.
-                }
-                default: {
-                    return state;
-                }
-            }
-        });
-    
-        const handleSubmit = event => {
-            event.preventDefault();
-            const uniqueKey = generateUniqueKey();
-            dispatch({
-                type: 'add_task',
-                title: inputRef.current.value,
-                uniqueKey: uniqueKey,
-            });
-        };
-        // Aunque la función generateUniqueKey es una expresión de función asignada a una variable const,
-        el código funciona porque la declaración de la variable y la asignación de la función se encuentran
-         antes de la primera vez que intentas llamar a la función.
-        const generateUniqueKey = () => {
-            return Math.random().toString(36).substring(2, 9);
-        };
-        return (
-            <>
-                <main className='px-4 pt-6 max-w-[1920px] my-0 mx-auto'>
-                    <Header1></Header1>
-                    <div className='seccionProyecto'>
-                        <div className='filaProyecto'>
-                            <div className='columnaPadre1'>
-                                <div className='tituloProyecto text-[40px] font-bold sm:text-[58px] my-3'>
-                                    Proyecto
-                                </div>
-                                <div className='columna1'>
-                                    <div className='columna1__elementos'>
-                                        <h1 className='columna1__titulo'>Introduce una tarea</h1>
-                                        <form onSubmit={handleSubmit} className='columna1__form'>
-                                            <label className=''></label>
-                                            <input
-                                                className='columna1__input'
-                                                type='text'
-                                                name='title'
-                                                ref={inputRef}
-                                            />
-                                            <input
-                                                className='columna1__enviar'
-                                                type='submit'
-                                                value='Enviar'
-                                            />
-                                        </form>
-                                        <div className='columna1__tasks'>
-                                            {tasks &&
-                                                tasks.map(task => (
-                                                    // usamos key para ayudar a React a identificar que elementos han cambiado, han sido añadidos
-                                                     o han sido eliminados de una lista
-    
-                                                    //Si renderizamos un lista de elementos en React usando un método como map, es necesario 
-                                                    proporcioanr una prop 'key' única para cada elemntos de la lista
-    
-                                                    <div className='columna1__task' key={task.uniqueKey}>
-                                                        <li className='columna1__li'>{task.title}</li>
-                                                        <div className='columna1__button'>
-                                                            <button
-                                                                className='columna1__borrar'
-                                                                onClick={() =>
-                                                                    dispatch({
-                                                                        type: 'remove_task',
-                                                                        uniqueKey: task.uniqueKey,
-                                                                    })
-                                                                }
-                                                            >
-                                                                Borrar
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <Component></Component>
-                        </div>
-                    </div>
-                </main>
-            </>
-        );
-    };
-    `;
-
+export const Explanation = () => {
 	return (
-		<div className='columnaPadre2'>
+		<div className=' w-full  '>
 			<div className=' my-3 tituloCodigo text-[40px] font-bold sm:text-[58px]'>
-				Código
+				Explicación
 			</div>
-			<SyntaxHighlighter
-				language='javascript'
-				style={atomOneDark}
-				className='columna2'
-			>
-				{codeString}
-			</SyntaxHighlighter>
+			<ul className='text-[18px]'>
+				<LiCol className='pb-3'>
+					El siguiente proyecto práctico de lista de tareas, usa ganchos nativos
+					de React como useReducer y useRef para almacenar y manipular la
+					información de forma interactiva.
+				</LiCol>
+
+				<LiCol>
+					Adentrándonos un poco más en el lado técnico 📄 con respecto al uso
+					del Reducer, su aplicación implica recibir tanto el estado actual como
+					las acciones que enviamos. Basándonos en este estado y estas acciones,
+					tenemos la capacidad de generar un nuevo estado. Esto nos permite
+					construir, modificar o generar completamente un nuevo estado basado en
+					nuestras operaciones dentro del propio componente.
+				</LiCol>
+				<LiCol>
+					Como nota interesante, si utilizáramos useReducer en conjunto con
+					useContext, podríamos lograr una funcionalidad muy similar para
+					gestionar el estado global de nuestra aplicación a través de
+					bibliotecas 📚 como Redux.
+				</LiCol>
+				<LiCol>
+					Para concluir, como un bono adicional, este proyecto es completamente
+					responsive. Se puede ver en una variedad de dispositivos, incluyendo
+					computadoras de 21 pulgadas, tamaños intermedios como un iPad mini, o
+					incluso un iPhone SE. 📲 Puedes encontrarlo en el proyecto como uno de
+					los posts del blog -{' '}
+					<a href='https://lnkd.in/dDByQE_R'>https://lnkd.in/dDByQE_R</a>
+				</LiCol>
+			</ul>
 		</div>
 	);
 };
