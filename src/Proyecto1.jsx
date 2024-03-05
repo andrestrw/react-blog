@@ -40,7 +40,7 @@ const ProyectoOne = () => {
 	};
 	return (
 		<>
-			<PageContainer className='px-4 pt-6 max-w-[1920px] my-0 mx-auto '>
+			<PageContainer>
 				<Header1></Header1>
 				<main className='min-h-screen'>
 					<Row>

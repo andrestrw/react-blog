@@ -1,5 +1,5 @@
 import img1 from '../assets/images/proyecto_2.png';
-import img3 from '../assets/images/topic2.png';
+import img3 from '../assets/images/pokemon.png';
 import img4 from '../assets/images/proyecto-lista-b.jpg';
 import { Link } from 'react-router-dom';
 
@@ -25,11 +25,11 @@ export const ArticlesContainer = () => {
 					text='ReactJs, JS, HTML, Tailwind'
 				></Article>
 			</Link>
-			<Link to='https://main--dazzling-churros-e7cef0.netlify.app/'>
+			<Link to='/appPokemon'>
 				<Article
 					img={img3}
 					number='03'
-					title=' App Topic'
+					title=' App Pokemon'
 					text='NextJS, TypesScript, MongoDB, Tailwind '
 				></Article>
 			</Link>

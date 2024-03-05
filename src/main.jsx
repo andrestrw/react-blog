@@ -10,6 +10,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // importación segundo proyecto
 import { AppBalance } from './AppBalance.jsx';
 import ProyectoOne from './Proyecto1.jsx';
+import MainPokemon from './componentes_proyecto_3/MainPokemon.jsx';
 
 // importación lista de tareas
 
@@ -31,17 +32,15 @@ const router = createBrowserRouter([
 		element: <ProyectoOne />,
 		errorElement: <h1>Error</h1>,
 	},
+	{
+		path: '/appPokemon',
+		element: <MainPokemon />,
+		errorElement: <h1>Error</h1>,
+	},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<>
-		{/* OTROS CURSOS */}
-		{/* <GiftExpertApp></GiftExpertApp>
-		
-		<Counter></Counter>
-		<Text></Text> */}
-		{/* OTROS CURSOS */}
-
 		<RouterProvider router={router} />
 	</>
 );
