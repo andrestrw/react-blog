@@ -3,14 +3,15 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 import './styles.css';
-// import { GiftExpertApp } from './componentes/GiftExpertApp.jsx';
-// import { Counter } from './componentes/Counter.jsx';
-// import { Text } from './componentes/Text.jsx';
+
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 // importación segundo proyecto
 import { AppBalance } from './AppBalance.jsx';
 import ProyectoOne from './Proyecto1.jsx';
 import MainPokemon from './componentes_proyecto_3/MainPokemon.jsx';
+import SignUp from './authenticationComponents/SignUp.jsx';
+import Login from './authenticationComponents/Login.jsx';
+import ForgotPassword from './authenticationComponents/ForgotPassword.jsx';
 
 // importación lista de tareas
 
@@ -35,6 +36,21 @@ const router = createBrowserRouter([
 	{
 		path: '/appPokemon',
 		element: <MainPokemon />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/signUp',
+		element: <SignUp />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/login',
+		element: <Login />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/forgotPassword',
+		element: <ForgotPassword />,
 		errorElement: <h1>Error</h1>,
 	},
 ]);
