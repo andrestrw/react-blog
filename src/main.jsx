@@ -12,6 +12,7 @@ import MainPokemon from './componentes_proyecto_3/MainPokemon.jsx';
 import SignUp from './authenticationComponents/SignUp.jsx';
 import Login from './authenticationComponents/Login.jsx';
 import ForgotPassword from './authenticationComponents/ForgotPassword.jsx';
+import ResetPassword from './authenticationComponents/ResetPassword.jsx';
 
 // importación lista de tareas
 
@@ -51,6 +52,12 @@ const router = createBrowserRouter([
 	{
 		path: '/forgotPassword',
 		element: <ForgotPassword />,
+		errorElement: <h1>Error</h1>,
+	},
+
+	{
+		path: '/resetPassword/:token',
+		element: <ResetPassword />,
 		errorElement: <h1>Error</h1>,
 	},
 ]);

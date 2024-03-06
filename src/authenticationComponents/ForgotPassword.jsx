@@ -3,21 +3,18 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
-	const [username, setUsername] = useState('');
 	const [email, setEmail] = useState('');
-	const [password, setPassword] = useState('');
 
 	const navigate = useNavigate();
 
 	const handleSubmit = e => {
 		e.preventDefault();
-		Axios.post('http://localhost:3000/auth/signup', {
-			username,
+		Axios.post('http://localhost:3000/auth/forgot-password', {
 			email,
-			password,
 		})
 			.then(response => {
 				if (response.data.status) {
+					alert('check you email for reset password link ');
 					navigate('/login');
 				}
 			})
@@ -47,9 +44,8 @@ const ForgotPassword = () => {
 					className='w-full p-2.5  bg-VeryDarkBlue hover:bg-white hover:text-black  hover:border-VeryDarkBlue hover:border-4 text-white rounded cursor-pointer   '
 					type='submit'
 				>
-					Sign Up
+					Send
 				</button>
-				<p>Have an Account?</p> <Link to='/login'>Login</Link>
 			</form>
 		</div>
 	);

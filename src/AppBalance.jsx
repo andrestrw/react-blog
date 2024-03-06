@@ -9,7 +9,7 @@ import { ExpenseChart } from './transactions/ExpenseChart';
 import { Header1 } from './componentes-blog/Header1';
 import PageContainer from './global_components/pageContainer';
 import Row from './global_components/estilosFila';
-import Columna from './global_components/Columna1';
+import Columna from './global_components/columna1';
 import { Explanation } from './comp-listaTareas/code';
 
 export const AppBalance = () => {

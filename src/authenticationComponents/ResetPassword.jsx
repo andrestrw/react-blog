@@ -1,24 +1,23 @@
 import Axios from 'axios';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
-const Login = () => {
-	const [email, setEmail] = useState('');
+const ResetPassword = () => {
 	const [password, setPassword] = useState('');
+	const { token } = useParams();
 
 	const navigate = useNavigate();
 
-	Axios.defaults.withCredentials = true;
 	const handleSubmit = e => {
 		e.preventDefault();
-		Axios.post('http://localhost:3000/auth/login', {
-			email,
+		Axios.post('http://localhost:3000/auth/reset-password/' + token, {
 			password,
 		})
 			.then(response => {
 				if (response.data.status) {
-					navigate('/');
+					navigate('/login');
 				}
+				console.log(response.data);
 			})
 			.catch(err => {
 				console.log(err);
@@ -31,19 +30,9 @@ const Login = () => {
 				className='w-80 p-5 rounded-lg border border-gray-300'
 				onSubmit={handleSubmit}
 			>
-				<h2>Login</h2>
-				<label className='block mb-2' htmlFor='email'>
-					Email:
-				</label>
-				<input
-					className=' border-VeryDarkBlue border w-full p-3 mb-4  box-border'
-					type='email'
-					autoComplete='off'
-					placeholder='Email'
-					onChange={e => setEmail(e.target.value)}
-				/>
+				<h2>Reset Password</h2>
 				<label className='block mb-2' htmlFor='password'>
-					Password
+					New Password
 				</label>
 				<input
 					className=' border-VeryDarkBlue border w-full p-3 mb-4  box-border'
@@ -55,15 +44,11 @@ const Login = () => {
 					className='w-full p-2.5  bg-VeryDarkBlue hover:bg-white hover:text-black  hover:border-VeryDarkBlue hover:border-4 text-white rounded cursor-pointer   '
 					type='submit'
 				>
-					Login
+					Reset
 				</button>
-				<Link to='/forgotPassword'>Forgot Password</Link>
-				<p>
-					Don't Have an Account? <Link to='/signUp'>Sign Up</Link>
-				</p>
 			</form>
 		</div>
 	);
 };
 
-export default Login;
+export default ResetPassword;

@@ -1,6 +1,6 @@
 import { useReducer, useRef } from 'react';
 import { Header1 } from './componentes-blog/Header1';
-import Columna from './global_components/Columna1';
+import Columna from './global_components/columna1.jsx';
 import PageContainer from './global_components/pageContainer';
 import Row from './global_components/estilosFila';
 import HeaderGlobal from './global_components/header';

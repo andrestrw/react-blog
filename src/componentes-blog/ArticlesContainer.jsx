@@ -1,5 +1,5 @@
 import img1 from '../assets/images/proyecto_2.png';
-import img3 from '../assets/images/pokemon.png';
+import img3 from '../assets/images/Pokemon.png';
 import img4 from '../assets/images/proyecto-lista-b.jpg';
 import { Link } from 'react-router-dom';
 
