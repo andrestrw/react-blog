@@ -13,6 +13,7 @@ import SignUp from './authenticationComponents/SignUp.jsx';
 import Login from './authenticationComponents/Login.jsx';
 import ForgotPassword from './authenticationComponents/ForgotPassword.jsx';
 import ResetPassword from './authenticationComponents/ResetPassword.jsx';
+import Dashboard from './authenticationComponents/Dashboard.jsx';
 
 // importación lista de tareas
 
@@ -58,6 +59,11 @@ const router = createBrowserRouter([
 	{
 		path: '/resetPassword/:token',
 		element: <ResetPassword />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/dashboard',
+		element: <Dashboard />,
 		errorElement: <h1>Error</h1>,
 	},
 ]);
