@@ -14,6 +14,8 @@ import Login from './authenticationComponents/Login.jsx';
 import ForgotPassword from './authenticationComponents/ForgotPassword.jsx';
 import ResetPassword from './authenticationComponents/ResetPassword.jsx';
 import Dashboard from './authenticationComponents/Dashboard.jsx';
+import CreateUser from './projectFourComponents/CreateUser.jsx';
+import UpdateUser from './projectFourComponents/UpdateUser.jsx';
 
 // importación lista de tareas
 
@@ -64,6 +66,16 @@ const router = createBrowserRouter([
 	{
 		path: '/dashboard',
 		element: <Dashboard />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/create',
+		element: <CreateUser />,
+		errorElement: <h1>Error</h1>,
+	},
+	{
+		path: '/edit/:id',
+		element: <UpdateUser />,
 		errorElement: <h1>Error</h1>,
 	},
 ]);
