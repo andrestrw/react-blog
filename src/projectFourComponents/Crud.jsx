@@ -21,7 +21,7 @@ const Crud = () => {
 
 	const fetchData = () => {
 		axios
-			.get('https://apinode-crud-production-cde3.up.railway.app/')
+			.get('/api')
 			.then(res => {
 				console.log(res);
 				setData(res.data);
