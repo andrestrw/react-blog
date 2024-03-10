@@ -27,15 +27,6 @@ const Dashboard = () => {
 	// 		.catch(err => console.log(err));
 	// }, []);
 
-	useEffect(() => {
-		axios
-			.get('http://localhost:3001')
-			.then(res => {
-				console.log(res.data);
-			})
-			.catch(err => console.log(err));
-	}, []);
-
 	return (
 		<>
 			<Crud></Crud>
